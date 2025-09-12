@@ -23,6 +23,7 @@ nexus-landing-page/
 ├── tsconfig.json        # Configuración de TypeScript
 ├── yarn.lock / package-lock.json
 └── .gitignore
+```
 ---
 ## 🔧 Instalación
 ```bash
