@@ -30,6 +30,7 @@ nexus-landing-page/
 git clone https://github.com/Corxo91/nexus-landing-page.git
 cd nexus-landing-page
 npm install   # o yarn install
+```
 ---
 ## 🧪 Desarrollo local
 ```bash
