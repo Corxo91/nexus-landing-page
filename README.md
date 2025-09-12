@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nexus Corp Landing Page
 
-## Getting Started
+Landing page corporativa de **Nexus Corp**, basada en la plantilla pública [landing-page-bank](https://github.com/ratasi/landing-page-bank) y adaptada a la identidad de Nexus. Desarrollada con un stack moderno para ofrecer alto rendimiento, escalabilidad y una experiencia de usuario profesional.
 
-First, run the development server:
+## 🚀 Tecnologías principales
+- **Next.js** — Framework React con renderizado híbrido (SSR/SSG), optimización de imágenes y rutas automáticas.
+- **TypeScript** — Tipado estático para mayor robustez y mantenibilidad.
+- **Tailwind CSS** — Estilos utilitarios y diseño responsivo ágil.
+- **Framer Motion** — Animaciones fluidas y transiciones de componentes.
+- **Eslint / Prettier** — Reglas de calidad de código y formateo automático.
+- **PostCSS** — Procesamiento avanzado de CSS.
+- **GitHub Actions / CI Ready** — Compatible con despliegue continuo en Vercel, Netlify o GitHub Pages.
 
+## 📂 Estructura del proyecto
+nexus-landing-page/
+├── public/ # Recursos estáticos (imágenes, íconos, etc.)
+├── src/
+│ ├── app/ # Rutas y páginas Next.js
+│ └── components/ # Componentes reutilizables de UI
+├── .eslintrc.json # Configuración de linting
+├── postcss.config.js # Configuración de PostCSS
+├── tailwind.config.ts # Configuración de Tailwind
+├── tsconfig.json # Configuración de TypeScript
+├── yarn.lock / package-lock.json
+└── .gitignore
+
+bash
+Copiar código
+
+## 🔧 Instalación
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/Corxo91/nexus-landing-page.git
+cd nexus-landing-page
+npm install   # o yarn install
+🧪 Desarrollo local
+bash
+Copiar código
+npm run dev   # o yarn dev
+Abre en tu navegador http://localhost:3000. Los cambios se actualizan en tiempo real (Hot Reloading activo).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 Despliegue en producción
+bash
+Copiar código
+npm run build   # o yarn build
+npm start       # o yarn start
+Listo para desplegar en Vercel, Netlify o GitHub Pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📅 Roadmap
+ Personalizar colores, tipografía y logotipo.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ Reemplazar contenido de prueba por información real.
 
-## Learn More
+ Optimizar SEO y accesibilidad.
 
-To learn more about Next.js, take a look at the following resources:
+ Agregar analítica.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ Configurar CI/CD para despliegue automático.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+🤝 Colaboración
+Mantén el código limpio y sigue las reglas de Eslint/Prettier.
 
-## Deploy on Vercel
+Usa nombres de ramas descriptivos (feature/nombre, fix/nombre).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Haz commits claros y concisos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Verifica que npm run build pase antes de hacer push.
+
+📞 Contacto
+Nexus Corp
+📧 contacto@nexuscorp.com
+🌐 (Sitio oficial pendiente)
+
+yaml
+Copiar código
+
+---
+
+### Cómo subirlo inmediatamente
+```bash
+printf '%s\n' '<PEGA AQUÍ EL CONTENIDO COMPLETO DEL README>' > README.md
+git add README.md
+git commit -m "docs: agregar README corporativo de Nexus"
+git push
+Con esto el README se verá bonito en GitHub y tu repo ya lucirá profesional.
