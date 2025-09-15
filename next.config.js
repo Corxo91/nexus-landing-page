@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   output: 'export',              // genera /out para GitHub Pages
-  images: { unoptimized: true }, // sin Image Optimizer (no hay server)
-  trailingSlash: true,  
+  output: 'export',           
+  images: { unoptimized: true }, 
+  trailingSlash: true,   
 };
 
 module.exports = nextConfig;
