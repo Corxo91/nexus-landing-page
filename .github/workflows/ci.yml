@@ -1,0 +1,63 @@
+name: CI (Lint, Types, Build+Export)
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "ci-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Lint & Typecheck & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (LTS) + Yarn cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Enable Corepack & Install deps
+        run: |
+          corepack enable
+          yarn install --frozen-lockfile
+
+      - name: Restore Next.js incremental cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-cache-ci-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            next-cache-ci-${{ runner.os }}-
+
+      # Lint si existe script "lint"
+      - name: Lint
+        run: |
+          if yarn run | grep -qE '(^| )lint( |$)'; then yarn lint; else echo "No lint script, skipping"; fi
+
+      # Typecheck si existe "typecheck" o tsc disponible
+      - name: Typecheck
+        run: |
+          if yarn run | grep -qE '(^| )typecheck( |$)'; then
+            yarn typecheck
+          elif npx --yes typescript --version >/dev/null 2>&1; then
+            npx tsc --noEmit
+          else
+            echo "No typecheck configured, skipping"
+          fi
+
+      # Garantiza que el repo es exportable antes de mergear
+      - name: Build & Export
+        run: |
+          yarn build
+          yarn export
