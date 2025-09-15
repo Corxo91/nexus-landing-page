@@ -1,25 +1,25 @@
-import { BestBusinessData } from "./BestBusiness.types";
+import { BestBusinessData } from "./BestBusiness.type";
 
 export const dataFeaturesBusiness: BestBusinessData = [
   {
     id: 1,
-    icon: "rewards",
-    title: "Recompensas",
+    icon: "network",
+    title: "Ecosistema integrado",
     description:
-      "Las mejores tarjetas de crédito ofrecen algunas combinaciones tentadoras de promociones y premios.",
+      "Todo lo que su negocio necesita en un solo lugar: desarrollo, seguridad, finanzas, redes y soporte.",
   },
   {
     id: 2,
-    icon: "safe",
-    title: "100% Seguro",
+    icon: "shield",
+    title: "Tecnología confiable",
     description:
-      "Tomamos medidas proactivas para asegurarnos de que su información  y sus transacciones estén seguras.",
+      "Infraestructura robusta, protección de datos y monitoreo 24/7 para que nunca te detengas.",
   },
   {
     id: 3,
-    icon: "send",
-    title: "Envíos gratis",
+    icon: "time-line",
+    title: "Crecimiento sin límites",
     description:
-      "Una tarjeta de crédito con transferencia de saldo puede ahorrarle mucho dinero en intereses.",
+      "Escala tu operación y expande tu visión con soluciones modulares y soporte experto",
   },
 ];

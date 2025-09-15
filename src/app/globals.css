@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./fonts.css";
 
 html {
   scroll-behavior: smooth;
@@ -9,6 +10,7 @@ html {
 body {
   background-color: #000000;
   color: #fff;
+  font-family: "Cascadia Code", monospace;
 }
 
 ::selection {
@@ -16,10 +18,15 @@ body {
 }
 
 .degradedBlue {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  padding: 5px 0;
+  background: linear-gradient(90deg, #00bf71 0%, #0e676f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 5px 0;
+}
+
+.bg-degradedBlue {
+  background: linear-gradient(90deg, #0e676f 0%, #00bf71 100%);
 }
 
 .swiper-pagination-bullet {

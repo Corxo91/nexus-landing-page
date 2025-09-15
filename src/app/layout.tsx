@@ -1,12 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
 
-const popinsFont = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bank Website | TarreDev 💸 ',
-  description: 'Follow me for more!',
+  title: 'Nexus Corporation | Innovación y Tecnología',
+  description: 'Innovación y tecnología al servicio de tu negocio. Soluciones digitales personalizadas para impulsar tu éxito.',
 }
 
 export default function RootLayout({
@@ -16,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={popinsFont.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
