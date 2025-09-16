@@ -12,11 +12,11 @@ export const dataHeader = [
   {
     id: 3,
     name: "Testimonios",
-    idLink: "#testimonios",
+    idLink: "#testimonial",
   },
   {
     id: 4,
-    name: "Servicios",
-    idLink: "#servicios",
+    name: "Metodos de Pago",
+    idLink: "#payments",
   },
 ];

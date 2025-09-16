@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,9 +6,13 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
+  max-width: 100vw;
   background-color: #000000;
   color: #fff;
   font-family: "Cascadia Code", monospace;
@@ -19,10 +24,10 @@ body {
 
 .degradedBlue {
   background: linear-gradient(90deg, #00bf71 0%, #0e676f 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    padding: 5px 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 5px 0;
 }
 
 .bg-degradedBlue {

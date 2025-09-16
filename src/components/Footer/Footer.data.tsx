@@ -3,38 +3,74 @@ import { RiFacebookCircleFill, RiInstagramLine, RiLinkedinBoxFill, RiTwitterXFil
 export const footerData = [
   {
     id: 1,
-    title: "Useful Links",
+    title: "Divisiones",
     links: [
       {
         id: 1,
-        name: "Contenido",
+        name: "Nexus Tech",
         link: "#",
       },
       {
         id: 2,
-        name: "Como trabajamos",
+        name: "Nexus Security",
         link: "#",
       },
       {
         id: 3,
-        name: "Crear",
+        name: "Nexus Market",
         link: "#",
       },
       {
         id: 4,
-        name: "Explorar",
+        name: "Nexus Network",
         link: "#",
       },
       {
         id: 5,
-        name: "Términos y condiciones",
+        name: "Nexus Labs",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Nexus Store",
+        link: "#",
+      },
+      {
+        id: 7,
+        name: "Nexus Shop",
+        link: "#",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Corporativo",
+    links: [
+      {
+        id: 1,
+        name: "Oportunidades",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Trabajos realizados",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Servicios propios",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Contacto",
         link: "#",
       },
     ],
   },
   {
     id: 2,
-    title: "Comunidad",
+    title: "Recursos",
     links: [
       {
         id: 1,
@@ -43,42 +79,27 @@ export const footerData = [
       },
       {
         id: 2,
-        name: "Partners",
+        name: "Cómo trabajamos",
         link: "#",
       },
       {
         id: 3,
-        name: "Sugerencias",
-        link: "#",
-      },
-      {
-        id: 4,
         name: "Blog",
         link: "#",
       },
       {
+        id: 4,
+        name: "Términos y Condiciones",
+        link: "#",
+      },
+      {
         id: 5,
-        name: "Newsletter",
+        name: "Políticas de Privacidad",
         link: "#",
       },
     ],
   },
-  {
-    id: 3,
-    title: "Partner",
-    links: [
-      {
-        id: 1,
-        name: "Nuestro partner",
-        link: "#",
-      },
-      {
-        id: 2,
-        name: "Hazte partner",
-        link: "#",
-      },
-    ],
-  },
+
 ];
 
 export const footerSocialNetworks = [
@@ -101,5 +122,5 @@ export const footerSocialNetworks = [
     id: 4,
     icon: <RiLinkedinBoxFill />,
     link: "#"
-  },
+  }
 ];
