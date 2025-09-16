@@ -72,7 +72,7 @@ export function Footer() {
           </div>
           <div className="my-3 text-[12px] text-primaryDark">
             <Reveal>
-              Al utilizar este sitio, usted acepta nuestros <span className="underline cursor-pointer text-primary" onClick={e => {e.preventDefault();setModalType("terms")}}>Términos y Condiciones</span> y <span className="underline cursor-pointer text-primary" onClick={e => {e.preventDefault();setModalType("privacy")}}>Política de Privacidad</span>. Nexus Corp y sus divisiones proporcionan sus servicios “tal cual”, sujetos a disponibilidad y condiciones de uso. El uso no autorizado de logotipos, marcas o contenido de este sitio está prohibido y puede ser sancionado por la ley.
+              Al utilizar este sitio, usted acepta nuestros <span className="underline cursor-pointer text-primary" onClick={e => {e.preventDefault();setModalType("terms")}}>Términos y Condiciones</span> y <span className="underline cursor-pointer text-primary" onClick={e => {e.preventDefault();setModalType("privacy")}}>Política de Privacidad</span>. Nexus Corp y sus divisiones proporcionan sus servicios, sujetos a disponibilidad y condiciones de uso. El uso no autorizado de logotipos, marcas o contenido de este sitio está prohibido y puede ser sancionado por la ley.
             </Reveal>
       <Modals
         open={modalType !== null}
