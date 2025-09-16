@@ -1,6 +1,20 @@
 // app/layout.tsx
 import './globals.css'
 import type { Metadata } from 'next'
+import {headers} from 'next/headers'
+
+function computedBase(): URL {
+  // Descubre host dinámico en Preview si NEXT_PUBLIC_SITE_URL no está seteado
+  const fallback = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  // En previews, Vercel expone HOST por cabecera
+  const hdrs = headers();
+  const host = hdrs.get('x-forwarded-host') || hdrs.get('host');
+  const proto = hdrs.get('x-forwarded-proto') || 'https';
+  const env = process.env.NEXT_PUBLIC_ENV;
+
+  if (!host || env === 'prod') return new URL(fallback);
+  return new URL(`${proto}://${host}`);
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nexuscorpglobal.com'),
