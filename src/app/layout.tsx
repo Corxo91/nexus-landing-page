@@ -2,6 +2,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import {headers} from 'next/headers'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function computedBase(): URL {
   // Descubre host dinámico en Preview si NEXT_PUBLIC_SITE_URL no está seteado
@@ -93,7 +94,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
+
     </html>
   )
 }
