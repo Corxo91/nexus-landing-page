@@ -8,7 +8,7 @@ Landing page corporativa de **Nexus Corp**, basada en la plantilla pública `lan
 - **Framer Motion** — Animaciones fluidas y transiciones de componentes.
 - **Eslint / Prettier** — Reglas de calidad de código y formateo automático.
 - **PostCSS** — Procesamiento avanzado de CSS.
-- **GitHub Actions / CI Ready** — Compatible con despliegue continuo en Vercel, Netlify o GitHub Pages.
+- **GitHub Actions / CI Ready** — Compatible con despliegue continuo en Vercel, Netlify o GitHub Pages..
 ---
 ## 📂 Estructura del proyecto
 ```
