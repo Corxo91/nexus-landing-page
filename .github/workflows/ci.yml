@@ -1,38 +1,41 @@
-name: CI
+name: Deploy to GitHub Pages
+
 on:
-  pull_request:
-    branches: [ main ]
   push:
-    branches: [ main ]
+    branches: ['main'] # Cambia a "master" si usas esa rama
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  quality:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node 20
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
           cache: 'npm'
-
-      - name: Install deps
+      - name: Install dependencies
         run: npm ci
-
-      - name: Lint
-        run: npm run lint --if-present
-
-      - name: Typecheck
-        run: npm run typecheck --if-present
-
-      - name: Unit tests
-        run: npm test --if-present -- --ci --reporters=default
-
-      - name: Build (fail fast)
-        env:
-          NEXT_PUBLIC_ENV: preview
+      - name: Build project
         run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out # Aquí le decimos que suba la carpeta "out"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
